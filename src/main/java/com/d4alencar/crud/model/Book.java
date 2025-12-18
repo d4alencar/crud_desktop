@@ -18,11 +18,8 @@ public class Book {
   public int getYear() {return year;}
   public String getAuthor() {return author;}
 
-  public boolean checkInfo () {
-    if(this.title == "" || this.author == "") {
-      return false;
-    }
-    return true;
+  public void setId(int id) {
+    this.id = id;
   }
 
   @Override

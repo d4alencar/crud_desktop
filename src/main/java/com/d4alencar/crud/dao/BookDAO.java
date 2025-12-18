@@ -78,9 +78,13 @@ public class BookDAO {
   public List<Book> searchBook (String key, String option) throws SQLException {
     List<Book> books = new ArrayList<>();
     try(Connection conn = DatabaseConnection.getConnection()) {
-
-      if(option.equals("year")) {
         String sql = "SELECT * FROM books WHERE year = CAST(? AS int) ORDER BY id";
+      if(option.equals("year")) {
+
+        if(key.isBlank()) {
+          return getAllBooks();
+        }
+
         PreparedStatement stmt = conn.prepareStatement(sql);
         
         stmt.setString(1, key);
@@ -94,7 +98,7 @@ public class BookDAO {
           ));
         }
       } else {
-        String sql = "SELECT * FROM books WHERE " + option + " ILIKE ? ORDER BY id";
+        sql = "SELECT * FROM books WHERE " + option + " ILIKE ? ORDER BY id";
         PreparedStatement stmt = conn.prepareStatement(sql);
 
         stmt.setString(1, "%"+key+"%");
