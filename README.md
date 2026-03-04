@@ -1,3 +1,14 @@
+# CRUD APPLICATION
+I developed a desktop CRUD application for managing books to deepen my understanding of Java and database integration.
+
+The application follows the MVC architecture to ensure separation of concerns and maintainable code.
+
+I used Java for its strong ecosystem and long-term relevance to backend and API development. Maven was used for dependency management and project structure.
+
+For the database, I chose PostgreSQL to gain experience with a production-level relational database system.
+
+The project helped me understand JDBC/database connectivity, data integrity constraints, and clean architectural organization.
+
 # Usage
 First of all make sure [Java 21](https://www.oracle.com/br/java/technologies/downloads/), [Maven](https://github.com/apache/maven), [Docker](https://github.com/docker/compose) is installed on your computer.
 
