@@ -39,10 +39,10 @@ mvn compile exec:java
 <img src="imgs/example2.png" alt="add dialog" />
 
 ### next steps
-- [ ] treat SQL Injections
 - [x] add search tool
 - [x] handle unexpected behaviour
-- [ ] improve GUI
+- [x] improve GUI
+- [ ] improve search tool
 
 ### tech stack
 
